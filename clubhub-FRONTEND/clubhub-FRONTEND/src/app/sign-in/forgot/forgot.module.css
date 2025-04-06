@@ -1,0 +1,27 @@
+.forgotPasswordContainer {
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  .forgotPasswordForm {
+    margin-top: 20px;
+  }
+  
+  .inputField {
+    margin-bottom: 15px;
+  }
+  
+  .submitButton {
+    padding: 10px 20px;
+    background-color: #E84B23;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .message {
+    margin-top: 20px;
+    color: #E84B23; /* Green for success */
+  }
+  

@@ -1,0 +1,169 @@
+/* Container and layout */
+.signinContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Itim', Regular;
+    background-color: #F5F5F5;
+  }
+  
+  /* Header styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #D3D8D7;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .homeButton {
+    padding: 10px 20px;
+    background-color: #E84B23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Sign-In title styling */
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    color: #FF9763;
+    margin-top: 20px;
+  }
+  
+  /* Sign-In form styling */
+  .signinForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .inputField {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputField label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .inputField input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .rememberMe {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rememberMe input {
+    margin-right: 10px;
+  }
+  
+  .submitButton {
+    padding: 15px;
+    background-color: #E84B23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Footer styling */
+  .footer {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #FF9763;
+  }
+  
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .footerLogo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 180px;
+  }
+  
+  .footerLinks {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+  }
+  
+  .footerLinks h4 {
+    margin-bottom: 10px;
+  }
+  
+  .footerLinks a {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+  }
+  
+  .footerRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .socialMedia {
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .socialIcon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .newsletter {
+    margin-top: 20px;
+    color: white;
+  }
+  
+  .newsletter h4 {
+    margin-bottom: 10px;
+  }
+  
+  .newsletter input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .newsletter button {
+    padding: 5px 20px;
+    background-color: #E84B23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

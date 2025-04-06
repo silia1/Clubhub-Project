@@ -1,0 +1,546 @@
+/* Custom Font */
+@font-face {
+  font-family: 'Itim';
+  src: url('/font/Itim-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply Itim font globally */
+body {
+  font-family: 'Itim', sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+}
+
+/* Make sure all text inherits this font */
+h1, h2, h3, h4, h5, h6, p, a, span, button, input, .btn-primary, .btn-secondary, .newsletter {
+  font-family: 'Itim', sans-serif;
+}
+
+/* Header Styles */
+.header {
+  background-color: #D3D8D7;
+  padding: 20px;
+  border-bottom: 1px solid #D3D8D7;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  margin-right: 20px;
+  color: #252B42; /* Dark blue text for links */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.signin-btn {
+  background-color: #E84B23; /* Sign In button in red */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Main Banner Styles */
+.main-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  background-color: white;
+}
+
+.text-container h1 {
+  font-size: 3rem;
+  color: #252B42; /* Dark text */
+}
+
+.text-container p {
+  font-size: 1.5rem;
+  color: #737373;
+}
+
+.buttons .btn-primary {
+  background-color: #E84B23; /* Primary button background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.buttons .btn-secondary {
+  border: 2px solid #E84B23; /* Secondary button border */
+  color: #E84B23;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* About Us Section */
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #FFFFFF, #FEE3D3); /* Gradient background */
+  padding: 50px 80px; /* Padding for space */
+  border-radius: 20px; /* Rounded edges */
+  position: relative; /* To allow positioned elements */
+}
+
+.about-us img {
+  width: 300px;
+  height: auto;
+  margin-right: 40px; /* Space between image and text */
+}
+
+.about-us h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #E84B23;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-us h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #E84B23;
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+.about-us p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 600px;
+  text-align: left;
+}
+
+.btn-read-more {
+  display: inline-block;
+  background-color: #E84B23;
+  color: white;
+  padding: 12px 30px;
+  margin-top: 20px;
+  border-radius: 50px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-read-more:hover {
+  transform: translateY(-5px);
+  background-color: #FF784E;
+}
+
+@media screen and (max-width: 768px) {
+  .about-us {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-us img {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .about-us p {
+    text-align: center;
+  }
+}
+
+
+/* Featured Clubs Section */
+.featured-clubs {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  gap: 20px; /* Spacing between the cards */
+}
+
+.featured-clubs .club {
+  text-align: center;
+  background-color: white; /* Ensure cards are white */
+  padding: 20px;
+  border-radius: 20px; /* Rounded corners for cloud-like shape */
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  position: relative;
+  transition: transform 0.3s ease-in-out; /* Add hover effect */
+}
+
+.featured-clubs .club:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+.featured-clubs .club img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover;
+  margin-bottom: 20px; /* Space between the image and title */
+}
+
+.featured-clubs .club h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.featured-clubs .club p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.featured-clubs .club .quote {
+  color: #FF5722; /* Color for the quote symbol */
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.featured-clubs .club .description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Add shadow-like effect underneath */
+.featured-clubs .club::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 15px;
+  right: 15px;
+  height: 15px;
+  background-color: #FF8A65; /* Shadow color */
+  border-radius: 50%;
+  z-index: -1; /* Place behind the club card */
+  filter: blur(15px);
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 50px;
+  background-color: white; /* Light pink */
+}
+
+.gallery h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #FF5722;
+  margin-bottom: 40px;
+  text-align: center; /* Center align the text */
+}
+
+.gallery h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #FF5722;
+  margin: 10px auto 0 auto; /* Center the underline */
+}
+
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* More button style to match .btn-read-more */
+.btn-more {
+  display: inline-block;
+  background-color: #E84B23; /* Same background color as .btn-read-more */
+  color: white;
+  padding: 12px 30px;
+  margin-top: 20px;
+  border-radius: 50px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-more:hover {
+  transform: translateY(-5px);
+  background-color: #FF784E; /* Same hover background color as .btn-read-more */
+}
+
+
+/* Testimonials Section */
+.testimonials {
+  background: linear-gradient(135deg, #FFFFFF, #FEE3D3); /* Light gradient background */
+  padding: 50px 80px; /* Similar padding to Featured Clubs */
+  border-radius: 20px;
+  text-align: center; /* Center-align the content */
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #FF5722;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.testimonials h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #FF5722;
+  margin: 10px auto 0 auto; /* Center the underline */
+}
+
+.testimonial-grid {
+  display: flex;
+  justify-content: space-around; /* Space testimonials evenly */
+  gap: 30px; /* Gap between testimonial cards */
+}
+
+.testimonial {
+  background: #FFF;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for a floating effect */
+  max-width: 300px; /* Ensure testimonials don't get too wide */
+  text-align: center; /* Center-align individual testimonials */
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.testimonial h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .testimonial-grid {
+    flex-direction: column; /* Stack testimonials on smaller screens */
+    align-items: center;
+  }
+}
+
+.contact {
+  padding: 50px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #FF5722;
+  margin-bottom: 40px;
+  text-align: center; 
+}
+
+.contact h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #FF5722;
+  margin: 10px auto 0 auto;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-form {
+  flex: 1;
+  margin-right: 50px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  display: inline-block;
+  background-color: #FF5722;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #E84B23;
+}
+
+.contact-info {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #FF5722;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.map iframe {
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+
+/* Footer Styles */
+.footer {
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #FF9763;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow content to wrap if needed */
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%; /* Ensures content stretches across the footer */
+}
+
+.footerLogo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* Aligns the logo to the left */
+  align-items: center;
+  height: auto; /* Auto height to adjust to the image */
+}
+
+.footerLogo img {
+  height: 80px; /* Set the height of the image */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Make sure the image fits within the container */
+}
+
+.footerLinks {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+.footerLinks h4 {
+  margin-bottom: 10px;
+}
+
+.footerLinks a {
+  display: block;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.footerRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.socialMedia {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px; /* Adds spacing between icons */
+}
+
+.socialIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.newsletter {
+  margin-top: 20px;
+  color: white;
+}
+
+.newsletter h4 {
+  margin-bottom: 10px;
+}
+
+.newsletter input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  flex: 1; /* Takes full width */
+}
+
+.newsletter button {
+  padding: 5px 20px; /* Increase the width of the button */
+  background-color: #E84B23;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevents the button from shrinking */
+}
+
+/* navigation logo indicator */
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Ensure it's above other content */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
