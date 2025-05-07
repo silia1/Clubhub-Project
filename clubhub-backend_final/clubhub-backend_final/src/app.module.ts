@@ -12,7 +12,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://127.0.0.1:27017/AuthExampleDB'),
+    MongooseModule.forRoot('mongodb+srv://silia:1234@cluster1.u0acbyz.mongodb.net/AuthExampleDB?retryWrites=true&w=majority'),
     MongooseModule.forFeature([{ name: 'User', schema: UserSchema }]), // Register the User model
     AuthModule,
     ClubModule,
